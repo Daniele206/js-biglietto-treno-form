@@ -30,3 +30,4 @@ Controllare la validità dei dati e in caso di fallimento generare un messaggio 
 5. Calcolare il costo del biglietto applicando eventuali sconti.
 6. Dare un aspetto ai risultati dei vari imput creando un biglietto.
 7. Andare a migliorare la grafica della pagina.
+8. BONUS: Andare a fare la verifica dei dati prima della creazzione del biglietto.
