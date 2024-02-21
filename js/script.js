@@ -60,13 +60,16 @@ btnCreate.addEventListener('click',function(event){
   <span class="fw-bold fs-5">NOME PASSEGGERO</span>
   <p>${inputName.value}</p>
   `
+
+  const numVagon = Math.ceil(Math.random() * 10)
   myNVagon.innerHTML = `
   <span class="fw-bold">Carrozza</span>
-  <p>4</p>`;
+  <p>${numVagon}</p>`;
 
+  const numTiket = Math.ceil(Math.random() * 10000)
   myNTiket.innerHTML = `
   <span class="fw-bold">Biglietto n:</span>
-  <p>4545</p>`;
+  <p>${numTiket}</p>`;
 
   myTiketPrice.innerHTML = `
   <span class="fw-bold">Costo Biglietto</span>
