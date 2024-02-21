@@ -10,6 +10,7 @@ const selectAge = document.querySelector('.select-age');
 
 // output
 const tiket = document.querySelector('.tiket')
+const tiketError = document.querySelector('.tiket-error')
 const tiketContent = document.querySelector('.tiket-content')
 const myForm = document.querySelector('.my-form')
 const myName = document.querySelector('.my-name')
@@ -75,9 +76,16 @@ btnCreate.addEventListener('click',function(event){
   <span class="fw-bold">Costo Biglietto</span>
   <p>${tiketPrice}&euro;</p>`;
 
-  tiket.classList.remove('d-none')
+  if(isNaN(inputName.value) == true && inputKm.value != '' && isNaN(inputKm.value) == false && selectAge.value != 'Sono:'){
+    tiket.classList.remove('d-none')
+    tiketError.classList.add('d-none')
+    myForm.classList.add('mb-5')
+  }else{
+    tiket.classList.add('d-none')
+    tiketError.classList.remove('d-none')
+    myForm.classList.add('mb-5')
+  }
 
-  myForm.classList.add('mb-5')
 });
 
 btnCancel.addEventListener('click',function(){
@@ -88,6 +96,8 @@ btnCancel.addEventListener('click',function(){
   tiket.innerHTML = `  `;
 
   tiket.classList.add('d-none')
+
+  tiketError.classList.add('d-none')
 
   myForm.classList.remove('mb-5')
 });
