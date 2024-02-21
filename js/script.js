@@ -1,7 +1,7 @@
 // elementi
-const discountunder18 = 20
-const discountover65 = 40
-const euroKm = 0.21
+const discountunder18 = 20;
+const discountover65 = 40;
+const euroKm = 0.21;
 
 // input
 const inputName = document.querySelector('.input-name');
@@ -9,19 +9,19 @@ const inputKm = document.querySelector('.input-km');
 const selectAge = document.querySelector('.select-age');
 
 // output
-const tiket = document.querySelector('.tiket')
-const tiketError = document.querySelector('.tiket-error')
-const tiketContent = document.querySelector('.tiket-content')
-const myForm = document.querySelector('.my-form')
-const myName = document.querySelector('.my-name')
-const myDiscount = document.querySelector('.my-discount')
-const myNVagon = document.querySelector('.my-n-vagon')
-const myNTiket = document.querySelector('.my-n-tiket')
-const myTiketPrice = document.querySelector('.my-tiket-price')
+const tiket = document.querySelector('.tiket');
+const tiketError = document.querySelector('.tiket-error');
+const tiketContent = document.querySelector('.tiket-content');
+const myForm = document.querySelector('.my-form');
+const myName = document.querySelector('.my-name');
+const myDiscount = document.querySelector('.my-discount');
+const myNVagon = document.querySelector('.my-n-vagon');
+const myNTiket = document.querySelector('.my-n-tiket');
+const myTiketPrice = document.querySelector('.my-tiket-price');
 
 // buttons
-const btnCreate = document.querySelector('.btn-create')
-const btnCancel = document.querySelector('.btn-cancel')
+const btnCreate = document.querySelector('.btn-create');
+const btnCancel = document.querySelector('.btn-cancel');
 
 btnCreate.addEventListener('click',function(event){
   event.preventDefault();
@@ -29,11 +29,11 @@ btnCreate.addEventListener('click',function(event){
   console.log(inputKm.value);
   console.log(selectAge.value);
 
-  let tiketPrice = inputKm.value * euroKm
+  let tiketPrice = inputKm.value * euroKm;
   console.log(tiketPrice);
 
   if(selectAge.value === 'under18'){
-    tiketPrice = tiketPrice - (tiketPrice * discountunder18 / 100)
+    tiketPrice = tiketPrice - (tiketPrice * discountunder18 / 100);
     console.log(tiketPrice);
     myDiscount.innerHTML = `
     <span class="fw-bold">Offerta</span>
@@ -51,16 +51,16 @@ btnCreate.addEventListener('click',function(event){
     <span class="fw-bold">Offerta</span>
     <p>Standard</p>
     `;
-  }
+  };
 
-  tiketPrice = tiketPrice.toFixed(2)
+  tiketPrice = tiketPrice.toFixed(2);
 
   console.log(tiketPrice);
 
   myName.innerHTML = `
   <span class="fw-bold fs-5">NOME PASSEGGERO</span>
   <p>${inputName.value}</p>
-  `
+  `;
 
   const numVagon = Math.ceil(Math.random() * 10)
   myNVagon.innerHTML = `
@@ -77,15 +77,14 @@ btnCreate.addEventListener('click',function(event){
   <p>${tiketPrice}&euro;</p>`;
 
   if(isNaN(inputName.value) == true && inputKm.value != '' && isNaN(inputKm.value) == false && selectAge.value != 'Sono:'){
-    tiket.classList.remove('d-none')
-    tiketError.classList.add('d-none')
-    myForm.classList.add('mb-5')
+    tiket.classList.remove('d-none');
+    tiketError.classList.add('d-none');
+    myForm.classList.add('mb-5');
   }else{
-    tiket.classList.add('d-none')
-    tiketError.classList.remove('d-none')
-    myForm.classList.add('mb-5')
-  }
-
+    tiket.classList.add('d-none');
+    tiketError.classList.remove('d-none');
+    myForm.classList.add('mb-5');
+  };
 });
 
 btnCancel.addEventListener('click',function(){
@@ -95,9 +94,9 @@ btnCancel.addEventListener('click',function(){
 
   tiket.innerHTML = `  `;
 
-  tiket.classList.add('d-none')
+  tiket.classList.add('d-none');
 
-  tiketError.classList.add('d-none')
+  tiketError.classList.add('d-none');
 
-  myForm.classList.remove('mb-5')
+  myForm.classList.remove('mb-5');
 });
