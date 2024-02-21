@@ -22,3 +22,11 @@ Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pa
 Controllare la validità dei dati e in caso di fallimento generare un messaggio di errore in pagina o con un alert()
 
 # Svolgimento
+
+1. Dichiarare le costanti.
+2. Creare la struttura HTML.
+3. Rendere attivi i vari imput con js.
+4. Prendere i dati richiesti tramite l'imput.
+5. Calcolare il costo del biglietto applicando eventuali sconti.
+6. Dare un aspetto ai risultati dei vari imput creando un biglietto.
+7. Andare a migliorare la grafica della pagina.
