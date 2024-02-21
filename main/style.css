@@ -1,3 +1,22 @@
 .my-container{
   height: 100vh;
 }
+
+.my-input, .select-age{
+  width: 30% !important;
+  margin-left: calc(10% / 6) !important;
+  margin-right: calc(10% / 6) !important;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.my-btn{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
+.tiket-content{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

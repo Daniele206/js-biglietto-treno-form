@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="./main/style.css">
   <title>js-biglietto-treno-form</title>
 </head>
-<body>
-  <div class="my-container d-flex align-items-center">
-    <div class="container bg-black">
-      <form action="#">
-        <input type="text" class="input-name my-input" placeholder="Nome">
+<body class="bg-primary">
+  <div class="my-container d-flex flex-column justify-content-center">
+    <div class="container my-form bg-white p-5 text-center rounded-5">
+      <h1 class="fw-bold pb-5">Crea il tuo biglietto</h1>
+      <form action="#" class="d-flex flex-wrap justify-content-center">
+        <input type="text" class="input-name my-input" placeholder="Nome e Cognome">
         <input type="text" class="input-km my-input" placeholder="Lunghezza tratta in km">
         <select class="form-select select-age">
           <option selected>Sono:</option>
@@ -20,11 +21,32 @@
           <option value="over18">Maggiorenne</option>
           <option value="over65">Ovrer 65</option>
         </select>
-        <button class="btn-create btn btn-primary">Crea Biglietto</button>
-        <button class="btn-cancel btn btn-warning">Annulla</button>
+        <button class="btn-create my-btn btn btn-primary">Crea Biglietto</button>
+        <button class="btn-cancel my-btn btn btn-warning">Annulla</button>
       </form>
-      <div class="tiket text-white">
-        
+    </div>
+    <div class="container d-none tiket bg-white p-5 rounded-5">
+      <h2 class="fw-bold pb-3">Il tuo biglietto</h2>
+      <div class="tiket-content d-flex row">
+        <div class="my-name col col-3 bg-info px-5">
+
+        </div>
+        <div class="col col-9">
+          <div class="row">
+            <div class="my-discount col-3">
+
+            </div>
+            <div class="my-n-vagon col-3">
+
+            </div>
+            <div class="my-n-tiket col-3">
+
+            </div>
+            <div class="my-tiket-price col-3">
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
