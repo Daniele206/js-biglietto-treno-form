@@ -29,7 +29,7 @@ btnCreate.addEventListener('click',function(event){
   console.log(inputKm.value);
   console.log(selectAge.value);
 
-  let tiketPrice = inputKm.value * euroKm;
+  let tiketPrice = parseInt(inputKm.value) * euroKm;
   console.log(tiketPrice);
 
   if(selectAge.value === 'under18'){
